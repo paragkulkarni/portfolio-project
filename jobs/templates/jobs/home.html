@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -24,7 +25,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Parag</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Parag</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -39,13 +40,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Twitter</a>
+              <a class="nav-link" href="">Twitter</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Resume</a>
+              <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="{% url 'all_blogs' %}">Blog</a>
             </li>
           </ul>
         </div>
